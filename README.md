@@ -1,3 +1,5 @@
+![alt text](https://i.imgur.com/5rsgGdv.png "Educational purposes")
+
 # V2_Forest
 
 [Workshop page](https://steamcommunity.com/sharedfiles/filedetails/?id=1349485112)
