@@ -1,0 +1,9 @@
+"LightmappedGeneric"
+       
+{
+        "$baseTexture" "maps/v2_forest/leaves01"
+        "$translucent" 1
+	"$decal" 1
+	"$decalscale" 0.25
+	"%keywords" "ins2,overlay,leaves,trash,garbage,rubble"
+}

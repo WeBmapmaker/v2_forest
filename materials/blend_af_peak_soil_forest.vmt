@@ -1,0 +1,16 @@
+"WorldVertexTransition"
+{
+	"$baseTexture" "maps/terrain/peak_soil_04"
+	"$bumpmap" 	"maps/terrain/peak_soil_04_normal"
+	"$surfaceprop" "grassl"
+	
+	"$baseTexture2" "maps/terrain/peak_soil_03"
+	"$bumpmap2" 	"maps/terrain/peak_soil_03_normal"
+	"$surfaceprop2" "gravel"
+
+	"$blendmodulatetexture" "maps/terrain/af_blend_modulate"
+	
+	
+	"%keywords" "ins2,afghanistan,blend" 
+	
+}

@@ -1,0 +1,12 @@
+"LightmappedGeneric"
+{
+	// Original shader: DecalBaseTimesLightmapVertexAlphaBlend
+	"$translucent" 1
+	"$basetexture" "maps/doi_v2_forest/leaves_ground03"
+//	"$vertexcolor" 1
+//	"$vertexalpha" 1
+	"$decal" 1
+	"$decalscale" 0.5
+//	"$decalfadeduration" 0.50
+//	"$decalfadetime" 5.00
+}
