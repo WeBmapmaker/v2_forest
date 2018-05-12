@@ -1,0 +1,151 @@
+
+
+
+materialPath: C:\Games\steamapps\common\dayofinfamy\doi\materials
+Loading d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.vmf
+Map revision 481
+"ultranewb_textures/flash_ground_blend_alt" - "materials/ground/grass001.vtf": cached version doesn't exist
+ConVarRef gpu_level doesn't point to an existing ConVar
+Material not found!: WOOD/WOODFLOOR005A
+Material not found!: CONCRETE/CONCRETEWALL072A
+Patching WVT material: maps/doi_v2_forest2/maps/doi_v2_forest/blend_af_peak_soil_forest_wvt_patch
+Patching WVT material: maps/doi_v2_forest2/maps/road/doi_seawall_03_blend_b_wvt_patch
+Patching WVT material: maps/doi_v2_forest2/maps/terrain/blend_gravel_grass_germany_02_wvt_patch
+Patching WVT material: maps/doi_v2_forest2/ultranewb_textures/flash_ground_blend_alt_wvt_patch
+Patching WVT material: maps/doi_v2_forest2/maps/doi_v2_forest/blend_af_peak_soil_forest_rock_wvt_patch
+Patching WVT material: maps/doi_v2_forest2/ground/hr_g/hr_rubble_dirt_001b_blend_wvt_patch
+Patching WVT material: maps/doi_v2_forest2/foy/roof/blend_shingles004_snow_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+Chop Details...done (0)
+Find Visible Detail Sides...
+Merged 1390 detail faces...done (0)
+Merging details...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.prt...Building visibility clusters...
+done (0)
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (1) (272179 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2919 texinfos to 1111
+Reduced 209 texdatas to 175 (9297 bytes to 7717)
+Writing d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.bsp
+4 seconds elapsed
+
+
+
+12 threads
+reading d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.bsp
+reading d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.prt
+ 334 portalclusters
+ 861 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 122 visible clusters (0.00%)
+Total clusters visible: 86416
+Average clusters visible: 258
+Building PAS...
+Average clusters audible: 331
+visdatasize:30132  compressed from 32064
+writing d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[6 texlights parsed from 'lights.rad']
+
+Loading d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.bsp
+Loaded alpha texture materials\models\props_foliage\Mall_trees_branches02.vtf
+Loaded alpha texture materials\models\foliage\pine_leaf.vtf
+Loaded alpha texture materials\models\foliage\pine_branch.vtf
+Loaded alpha texture materials\models\foliage\pine_leaf_fresh.vtf
+Loaded alpha texture materials\models\foliage\pine_leaf_twiggy.vtf
+Loaded alpha texture materials\models\props_foliage\Urban_Trees_branches02.vtf
+Loaded alpha texture materials\models\static_fortifications\chainlink_barbed_wire.vtf
+Loaded alpha texture materials\models\static_fortifications\chainlink_chains.vtf
+2826 faces
+1 degenerate faces
+3998947 square feet [575848384.00 square inches]
+158 Displacements
+411445 Square Feet [59248168.00 Square Inches]
+2825 patches before subdivision
+40433 patches after subdivision
+10 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 1580780, max 456
+transfer lists:  12.1 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(21685, 12819, 4117)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(1108, 574, 157)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(90, 41, 9)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(12, 5, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(1, 1, 0)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(0, 0, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0209 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Computing static prop lighting : 00...1...2...3...4...5...6...7...8...9...10
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                  88/1024         4224/49152    ( 8.6%) 
+brushes                768/8192         9216/98304    ( 9.4%) 
+brushsides            9636/65536       77088/524288   (14.7%) 
+planes               15336/65536      306720/1310720  (23.4%) 
+vertexes              6757/65536       81084/786432   (10.3%) 
+nodes                 1244/65536       39808/2097152  ( 1.9%) 
+texinfos              1111/12288       79992/884736   ( 9.0%) 
+texdata                175/2048         5600/65536    ( 8.5%) 
+dispinfos              158/0           27808/0        ( 0.0%) 
+disp_verts            9102/0          182040/0        ( 0.0%) 
+disp_tris            13888/0           27776/0        ( 0.0%) 
+disp_multiblend          0/0               0/0        ( 0.0%) 
+disp_lmsamples     1338512/0         1338512/0        ( 0.0%) 
+faces                 2826/65536      158256/3670016  ( 4.3%) 
+hdr faces             2826/65536      158256/3670016  ( 4.3%) 
+origfaces             2213/65536      123928/3670016  ( 3.4%) 
+facebrushes             32/0              64/0        ( 0.0%) 
+facebrushlists        2826/0           11304/0        ( 0.0%) 
+leaves                1333/65536       42656/2097152  ( 2.0%) 
+leaffaces             3195/65536        6390/131072   ( 4.9%) 
+leafbrushes           2017/65536        4034/131072   ( 3.1%) 
+areas                    3/1024           24/8192     ( 0.3%) 
+surfedges            22582/512000      90328/2048000  ( 4.4%) 
+edges                14093/256000      56372/1024000  ( 5.5%) 
+LDR worldlights          0/8192            0/819200   ( 0.0%) 
+HDR worldlights         10/8192         1000/819200   ( 0.1%) 
+leafwaterdata            3/32768          36/393216   ( 0.0%) 
+waterstrips            426/32768        4260/327680   ( 1.3%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices          7782/65536       15564/131072   (11.9%) 
+cubemapsamples          27/1024          432/16384    ( 2.6%) 
+overlays               314/1024       110528/360448   (30.7%) 
+LDR lightdata         [variable]           0/0        ( 0.0%) 
+HDR lightdata         [variable]     7307996/0        ( 0.0%) 
+visdata               [variable]       30132/16777216 ( 0.2%) 
+entdata               [variable]      253326/393216   (64.4%) 
+LDR ambient table     1333/65536        5332/262144   ( 2.0%) 
+HDR ambient table     1333/65536        5332/262144   ( 2.0%) 
+LDR leaf ambient      1333/65536       37324/1835008  ( 2.0%) 
+HDR leaf ambient      6788/65536      190064/1835008  (10.4%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/12       ( 8.3%) 
+static props          [variable]           1/80248    ( 0.0%) 
+pakfile               [variable]     6787366/0        ( 0.0%) 
+physics               [variable]      272179/4194304  ( 6.5%) 
+physics terrain       [variable]       39582/1048576  ( 3.8%) 
+
+Level flags = 6
+
+Total triangle count: 8096
+Writing d:\sourceengine\dayofinfamy\mapsrc\v2_forest\mapsrc\doi_v2_forest2.bsp
+9 minutes, 5 seconds elapsed
