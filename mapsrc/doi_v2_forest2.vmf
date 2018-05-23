@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7690"
-	"mapversion" "609"
+	"mapversion" "643"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -38,13 +38,13 @@ viewsettings
 	"bSnapToGrid" "1"
 	"bShowGrid" "1"
 	"bShowLogicalGrid" "0"
-	"nGridSpacing" "1"
+	"nGridSpacing" "8"
 	"bShow3DGrid" "0"
 }
 world
 {
 	"id" "1"
-	"mapversion" "609"
+	"mapversion" "643"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.23 from doi_v2_forest"
 	"detailmaterial" "detail/detailsprites"
@@ -39214,6 +39214,16 @@ world
 	}
 	group
 	{
+		"id" "331653"
+		editor
+		{
+			"color" "176 109 0"
+			"visgroupshown" "1"
+			"visgroupautoshown" "1"
+		}
+	}
+	group
+	{
 		"id" "318066"
 		editor
 		{
@@ -39943,6 +39953,182 @@ world
 }
 entity
 {
+	"id" "330690"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "hetzer_mlogic_isMovingBack"
+	connections
+	{
+		"OnFalse" "hetzer_mlogic_animBackSetCompareValue00-1"
+		"OnTrue" "hetzer_mlogic_animBackSetCompareValue10-1"
+	}
+	"origin" "3464 256 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "330692"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "hetzer_mlogic_isMoving"
+	connections
+	{
+		"OnFalse" "hetzer_mlogic_animForwardSetCompareValue00-1"
+		"OnTrue" "hetzer_mlogic_animForwardSetCompareValue10-1"
+	}
+	"origin" "3448 256 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
+	}
+}
+entity
+{
+	"id" "330733"
+	"classname" "logic_compare"
+	"CompareValue" "0"
+	"InitialValue" "0"
+	"targetname" "hetzer_mlogic_animForward"
+	connections
+	{
+		"OnGreaterThan" "hetzer_fun_moveTrigger0-1"
+		"OnGreaterThan" "hetzer_mlogic_isMovingSetValue10-1"
+	}
+	"origin" "3448 240 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "330831"
+	"classname" "logic_compare"
+	"CompareValue" "0"
+	"InitialValue" "0"
+	"targetname" "hetzer_mlogic_animBack"
+	connections
+	{
+		"OnGreaterThan" "hetzer_mlogic_isMovingBackSetValue10-1"
+		"OnGreaterThan" "hetzer_fun_moveBackTrigger0-1"
+	}
+	"origin" "3464 240 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "330999"
+	"classname" "logic_timer"
+	"RefireTime" "0.1"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "hetzer_mlogic_timerStop"
+	"UseRandomTime" "0"
+	connections
+	{
+		"OnTimer" "hetzer_mlogic_fun_stopTrigger0-1"
+	}
+	"origin" "3432 240 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "331017"
+	"classname" "logic_relay"
+	"spawnflags" "2"
+	"StartDisabled" "0"
+	"targetname" "hetzer_mlogic_fun_stop"
+	connections
+	{
+		"OnTrigger" "hetzer_mlogic_isMovingSetValue00-1"
+		"OnTrigger" "hetzer_mlogic_isMovingBackSetValue00-1"
+		"OnTrigger" "hetzer_fun_stopTrigger0-1"
+	}
+	"origin" "3432 256 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "331455"
+	"classname" "logic_relay"
+	"spawnflags" "2"
+	"StartDisabled" "0"
+	"targetname" "hetzer_mlogic_fun_startCycle"
+	connections
+	{
+		"OnTrigger" "hetzer_mlogic_boolStopTest2-1"
+		"OnTrigger" "hetzer_mlogic_fun_stopDisable0-1"
+		"OnTrigger" "hetzer_mlogic_fun_stopEnable1.99-1"
+		"OnTrigger" "hetzer_mlogic_fun_stopCheckEnable0-1"
+	}
+	"origin" "3496 224 104"
+	editor
+	{
+		"color" "176 109 0"
+		"groupid" "331653"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "332215"
+	"classname" "logic_relay"
+	"spawnflags" "2"
+	"StartDisabled" "0"
+	"targetname" "hetzer_mlogic_fun_stopCheck"
+	connections
+	{
+		"OnTrigger" "hetzer_mlogic_timerStopResetTimer0-1"
+	}
+	"origin" "3432 224 104"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
 	"id" "324215"
 	"classname" "prop_dynamic"
 	"angles" "0 180 180"
@@ -40039,283 +40225,6 @@ entity
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
-	}
-}
-entity
-{
-	"id" "324321"
-	"classname" "logic_timer"
-	"RefireTime" "2"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"targetname" "hetzer_mlogic_timer"
-	"UseRandomTime" "0"
-	connections
-	{
-		"OnTimer" "hetzer_mlogic_boolStopTest0.2-1"
-	}
-	"origin" "4104 -616 102"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 500]"
-	}
-}
-entity
-{
-	"id" "324369"
-	"classname" "func_brush"
-	"disableflashlight" "0"
-	"disablereceiveshadows" "0"
-	"disableshadowdepth" "0"
-	"disableshadows" "0"
-	"drawinfastreflection" "0"
-	"InputFilter" "0"
-	"invert_exclusion" "0"
-	"origin" "3385 -57.5 70.5"
-	"renderamt" "255"
-	"rendercolor" "255 255 255"
-	"renderfx" "0"
-	"rendermode" "0"
-	"shadowdepthnocache" "0"
-	"solidbsp" "0"
-	"Solidity" "2"
-	"spawnflags" "2"
-	"StartDisabled" "0"
-	"targetname" "hetzer_teleporterBrush1"
-	"vrad_brush_cast_shadows" "0"
-	solid
-	{
-		"id" "324367"
-		side
-		{
-			"id" "17078"
-			"plane" "(3376 -51 81) (3394 -51 81) (3394 -64 81)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 -1 0 -32] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17077"
-			"plane" "(3376 -64 60) (3394 -64 60) (3394 -51 60)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 -1 0 -32] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17076"
-			"plane" "(3376 -51 81) (3376 -64 81) (3376 -64 60)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[0 0 -1 3.97974] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17075"
-			"plane" "(3394 -51 60) (3394 -64 60) (3394 -64 81)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[0 0 -1 3.97974] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17074"
-			"plane" "(3394 -51 81) (3376 -51 81) (3376 -51 60)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 0 -1 3.97974] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17073"
-			"plane" "(3394 -64 60) (3376 -64 60) (3376 -64 81)"
-			"material" "TOOLS/TOOLSNODRAW"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 0 -1 3.97974] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 2500]"
-	}
-}
-entity
-{
-	"id" "324406"
-	"classname" "info_teleport_destination"
-	"angles" "0 0 0"
-	"parentname" "hetzer_mover"
-	"targetname" "hetzer_teleporterDest"
-	"origin" "3379 -56 45"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 3500]"
-	}
-}
-entity
-{
-	"id" "324430"
-	"classname" "trigger_teleport"
-	"filtername" "filter_hetzer_trigger1"
-	"origin" "-1606 866 530"
-	"spawnflags" "64"
-	"StartDisabled" "0"
-	"target" "hetzer_teleporterDest"
-	"targetname" "hetzer_teleporter1"
-	"UseLandmarkAngles" "1"
-	solid
-	{
-		"id" "324428"
-		side
-		{
-			"id" "17090"
-			"plane" "(-7010 3239 1357) (3798 3239 1357) (3798 -1507 1357)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 -1 0 24] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17089"
-			"plane" "(-7010 -1507 -297) (3798 -1507 -297) (3798 3239 -297)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 -1 0 24] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17088"
-			"plane" "(-7010 3239 1357) (-7010 -1507 1357) (-7010 -1507 -297)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 -24] 0.25"
-			"vaxis" "[0 0 -1 -5.88776] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17087"
-			"plane" "(3798 3239 -297) (3798 -1507 -297) (3798 -1507 1357)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 -24] 0.25"
-			"vaxis" "[0 0 -1 -5.88776] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17086"
-			"plane" "(3798 3239 1357) (-7010 3239 1357) (-7010 3239 -297)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 0 -1 -5.88776] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17085"
-			"plane" "(3798 -1507 -297) (-7010 -1507 -297) (-7010 -1507 1357)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 12] 0.25"
-			"vaxis" "[0 0 -1 -5.88776] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 5000]"
-	}
-}
-entity
-{
-	"id" "324454"
-	"classname" "filter_activator_name"
-	"filtername" "hetzer_teleporterBrush1"
-	"Negated" "Allow entities that match criteria"
-	"targetname" "filter_hetzer_trigger1"
-	"origin" "3362.91 -388.956 86.8761"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[2500 -13268]"
-	}
-}
-entity
-{
-	"id" "325080"
-	"classname" "logic_timer"
-	"RefireTime" "0.1"
-	"spawnflags" "0"
-	"StartDisabled" "0"
-	"UseRandomTime" "0"
-	connections
-	{
-		"OnTimer" "hetzer_teleporter1Toggle0-1"
-	}
-	"origin" "3268.89 -357.4 91.5749"
-	editor
-	{
-		"color" "220 30 220"
-		"visgroupshown" "1"
-		"visgroupautoshown" "1"
-		"logicalpos" "[0 7000]"
 	}
 }
 entity
@@ -41405,6 +41314,7 @@ entity
 {
 	"id" "311538"
 	"classname" "logic_relay"
+	"spawnflags" "0"
 	"StartDisabled" "0"
 	"targetname" "hetzer_mlogic_reset"
 	connections
@@ -41413,10 +41323,11 @@ entity
 		"OnTrigger" "hetzer_mlogic_boolStopSetValue00-1"
 		"OnTrigger" "hetzer_mlogic_boolForwardSetValue00-1"
 	}
-	"origin" "4104 -600 104"
+	"origin" "3496 256 104"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -41591,7 +41502,7 @@ entity
 		{
 			"id" "17006"
 			"plane" "(-3026 104.998 459) (-3026 149.998 459) (-2980 149.998 459)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 56] 0.25"
 			"vaxis" "[0 -1 0 -8.00191] 0.25"
 			"rotation" "0"
@@ -41602,7 +41513,7 @@ entity
 		{
 			"id" "17005"
 			"plane" "(-3026 149.998 395) (-3026 105 395) (-2980 104.998 395)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 56] 0.25"
 			"vaxis" "[0 -1 0 -8.00191] 0.25"
 			"rotation" "0"
@@ -41613,7 +41524,7 @@ entity
 		{
 			"id" "17004"
 			"plane" "(-3026 104.998 395) (-3026 149.998 395) (-3026 149.998 459)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[0 1 0 8.00191] 0.25"
 			"vaxis" "[0 0 -1 8] 0.25"
 			"rotation" "0"
@@ -41624,7 +41535,7 @@ entity
 		{
 			"id" "17003"
 			"plane" "(-2980 149.998 395) (-2980 105 395) (-2980 104.998 459)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[0 1 0 8.00191] 0.25"
 			"vaxis" "[0 0 -1 8] 0.25"
 			"rotation" "0"
@@ -41635,7 +41546,7 @@ entity
 		{
 			"id" "17002"
 			"plane" "(-3026 150 395) (-2980 150 395) (-2980 150 459)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 56] 0.25"
 			"vaxis" "[0 0 -1 8] 0.25"
 			"rotation" "0"
@@ -41646,7 +41557,7 @@ entity
 		{
 			"id" "17001"
 			"plane" "(-2980 105 395) (-3026 105 395) (-3026 105 459)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 56] 0.25"
 			"vaxis" "[0 0 -1 8] 0.25"
 			"rotation" "0"
@@ -41700,10 +41611,11 @@ entity
 		"OnTrigger" "hetzer_cannon_fireExplExplode0-1"
 		"OnTrigger" "hetzer_cannon_fireExplSoundPlaySound0-1"
 	}
-	"origin" "4085 -635.179 67"
+	"origin" "3472 344 103"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -41732,7 +41644,7 @@ entity
 {
 	"id" "306268"
 	"classname" "logic_timer"
-	"RefireTime" "0.1"
+	"RefireTime" "0.01"
 	"spawnflags" "0"
 	"StartDisabled" "0"
 	"targetname" "hetzer_mlogicTrigger_timer"
@@ -41743,10 +41655,11 @@ entity
 		"OnTimer" "trigger_hetzerAxisTouchTest0-1"
 		"OnTimer" "hetzer_starterTouchTest0-1"
 	}
-	"origin" "4120 -616 104"
+	"origin" "3480 208 104"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -41761,12 +41674,17 @@ entity
 	connections
 	{
 		"OnFalse" "hetzer_mlogic_boolForwardTest0-1"
-		"OnTrue" "hetzer_fun_moveBackTrigger0-1"
+		"OnTrue" "hetzer_mlogic_animBackSetValue10-1"
+		"OnTrue" "hetzer_moverStartBackward0-1"
+		"OnTrue" "hetzer_mlogic_animBackCompare0.01-1"
+		"OnTrue" "hetzer_mlogic_isMovingBackTest0-1"
+		"OnTrue" "hetzer_mlogic_fun_startCycleTrigger0-1"
 	}
-	"origin" "4072 -616 104"
+	"origin" "3464 224 104"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
@@ -41781,12 +41699,15 @@ entity
 	connections
 	{
 		"OnFalse" "hetzer_mlogic_boolBackTest0-1"
-		"OnTrue" "hetzer_fun_stopTrigger0-1"
+		"OnTrue" "hetzer_mlogic_fun_stopTrigger0.01-1"
+		"OnTrue" "hetzer_mlogic_fun_startCycleTrigger0.02-1"
+		"OnTrue" "hetzer_mlogic_fun_stopEnable0-1"
 	}
-	"origin" "4088 -616 104"
+	"origin" "3480 224 104"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
@@ -41800,13 +41721,21 @@ entity
 	"targetname" "hetzer_mlogic_boolForward"
 	connections
 	{
-		"OnTrue" "hetzer_fun_moveTrigger0-1"
-		"OnFalse" "hetzer_fun_stopTrigger0-1"
+		"OnTrue" "hetzer_mlogic_animForwardCompare0.01-1"
+		"OnTrue" "hetzer_mlogic_isMovingTest0-1"
+		"OnTrue" "hetzer_moverStartForward0-1"
+		"OnTrue" "hetzer_mlogic_animForwardSetValue10-1"
+		"OnFalse" "hetzer_moverStop0-1"
+		"OnTrue" "hetzer_mlogic_fun_startCycleTrigger0-1"
+		"OnFalse" "hetzer_mlogic_fun_stopCheckTrigger0-1"
+		"OnFalse" "hetzer_mlogic_fun_stopCheckDisable0.01-1"
+		"OnFalse" "hetzer_mlogic_boolStopTest0.02-1"
 	}
-	"origin" "4056 -616 104"
+	"origin" "3448 224 104"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
@@ -41855,10 +41784,11 @@ entity
 		"OnTrigger" "hetzer_trackTimerBack_leftDisable0-1"
 		"OnTrigger" "hetzer_sound_tracksLeftStopSound0-1"
 	}
-	"origin" "4044 -722.659 102"
+	"origin" "3472 408.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -41883,10 +41813,11 @@ entity
 		"OnTimer" "hetzer_gun_rot1Stop0.8-1"
 		"OnTimer" "hetzer_gun_rot1Stop2.8-1"
 	}
-	"origin" "3964 -762.659 102"
+	"origin" "3392 368.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
@@ -41909,10 +41840,11 @@ entity
 		"OnTimer" "hetzer_gun_rot2StartBackward0-1"
 		"OnTimer" "hetzer_gun_rot2Stop1-1"
 	}
-	"origin" "3980 -762.659 102"
+	"origin" "3408 368.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 1000]"
@@ -41925,10 +41857,11 @@ entity
 	"spawnflags" "2"
 	"StartDisabled" "0"
 	"targetname" "hetzer_fun_noop"
-	"origin" "4028 -786.659 102"
+	"origin" "3456 344.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -41953,10 +41886,11 @@ entity
 		"OnTrigger" "hetzer_fun_moveTrigger0-1"
 		"OnTrigger" "hetzer_fun_stopTrigger0.01-1"
 	}
-	"origin" "4028 -770.659 102"
+	"origin" "3456 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -41977,10 +41911,11 @@ entity
 		"OnTrigger" "hetzer_fun_backwardTrackRightTrigger0-1"
 		"OnTrigger" "hetzer_sound_enginePlaySound0-1"
 	}
-	"origin" "4076 -770.659 102"
+	"origin" "3504 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42001,10 +41936,11 @@ entity
 		"OnTrigger" "hetzer_fun_forwardTrackRightTrigger0-1"
 		"OnTrigger" "hetzer_sound_enginePlaySound0-1"
 	}
-	"origin" "4060 -770.659 102"
+	"origin" "3488 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42021,14 +41957,15 @@ entity
 	{
 		"OnTrigger" "hetzer_fun_stopTrackLeftTrigger0-1"
 		"OnTrigger" "hetzer_smoke_exhaustTurnOff0-1"
-		"OnTrigger" "hetzer_moverStop0-1"
 		"OnTrigger" "hetzer_fun_stopTrackRightTrigger0-1"
 		"OnTrigger" "hetzer_sound_engineStopSound0-1"
+		"OnTrigger" "hetzer_moverStop0-1"
 	}
-	"origin" "4044 -770.659 102"
+	"origin" "3472 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42049,10 +41986,11 @@ entity
 		"OnTrigger" "hetzer_smoke_exhaustSpeed303-1"
 		"OnTrigger" "hetzer_smoke_exhaustRate102-1"
 	}
-	"origin" "4004 -722.659 102"
+	"origin" "3432 408.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42072,10 +42010,11 @@ entity
 		"OutValue" "hetzer_skinCaseInValue0-1"
 		"OnHitMax" "!selfSetValue00-1"
 	}
-	"origin" "4108 -770.659 102"
+	"origin" "3536 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42097,10 +42036,11 @@ entity
 		"OnCase03" "hetzer_fun_setSkin2Trigger0-1"
 		"OnCase04" "hetzer_fun_setSkin3Trigger0-1"
 	}
-	"origin" "4124 -770.659 102"
+	"origin" "3552 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42119,10 +42059,11 @@ entity
 		"OnTrigger" "hetzer_cannonSkin00-1"
 		"OnTrigger" "hetzer_body_extrasSkin00-1"
 	}
-	"origin" "4140 -770.659 102"
+	"origin" "3568 360.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42141,10 +42082,11 @@ entity
 		"OnTrigger" "hetzer_cannonSkin10-1"
 		"OnTrigger" "hetzer_body_extrasSkin00-1"
 	}
-	"origin" "4140 -786.659 102"
+	"origin" "3568 344.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42163,10 +42105,11 @@ entity
 		"OnTrigger" "hetzer_cannonSkin20-1"
 		"OnTrigger" "hetzer_body_extrasSkin10-1"
 	}
-	"origin" "4140 -802.659 102"
+	"origin" "3568 328.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42185,10 +42128,11 @@ entity
 		"OnTrigger" "hetzer_cannonSkin30-1"
 		"OnTrigger" "hetzer_body_extrasSkin00-1"
 	}
-	"origin" "4140 -818.659 102"
+	"origin" "3568 312.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42213,10 +42157,11 @@ entity
 		"OnTrigger" "hetzer_trackTimerBack_leftDisable0-1"
 		"OnTrigger" "hetzer_sound_tracksLeftPlaySound0-1"
 	}
-	"origin" "4044 -706.659 102"
+	"origin" "3472 424.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42241,10 +42186,11 @@ entity
 		"OnTrigger" "hetzer_trackTimerBack_leftEnable0-1"
 		"OnTrigger" "hetzer_sound_tracksLeftPlaySound0-1"
 	}
-	"origin" "4060 -706.659 102"
+	"origin" "3488 424.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42263,10 +42209,11 @@ entity
 	{
 		"OnTimer" "hetzer_trackAnimCounter_leftSubtract10-1"
 	}
-	"origin" "4060 -690.659 102"
+	"origin" "3488 440.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42285,10 +42232,11 @@ entity
 	{
 		"OnTimer" "hetzer_trackAnimCounter_leftAdd10-1"
 	}
-	"origin" "4044 -690.659 102"
+	"origin" "3472 440.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42309,10 +42257,11 @@ entity
 		"OnHitMax" "!selfSetValue10-1"
 		"OnHitMin" "!selfSetValue30-1"
 	}
-	"origin" "4044 -674.659 102"
+	"origin" "3472 456.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42338,10 +42287,11 @@ entity
 		"OnCase03" "hetzer_track_left0DisableDraw0-1"
 		"OnCase03" "hetzer_track_left1DisableDraw0-1"
 	}
-	"origin" "4044 -658.659 102"
+	"origin" "3472 472.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42367,10 +42317,11 @@ entity
 		"OnCase03" "hetzer_track_right0DisableDraw0-1"
 		"OnCase03" "hetzer_track_right1DisableDraw0-1"
 	}
-	"origin" "4108 -658.659 102"
+	"origin" "3536 472.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42391,10 +42342,11 @@ entity
 		"OnHitMax" "!selfSetValue10-1"
 		"OnHitMin" "!selfSetValue30-1"
 	}
-	"origin" "4108 -674.659 102"
+	"origin" "3536 456.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42413,10 +42365,11 @@ entity
 	{
 		"OnTimer" "hetzer_trackAnimCounter_rightAdd10-1"
 	}
-	"origin" "4108 -690.659 102"
+	"origin" "3536 440.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42435,10 +42388,11 @@ entity
 	{
 		"OnTimer" "hetzer_trackAnimCounter_rightSubtract10-1"
 	}
-	"origin" "4124 -690.659 102"
+	"origin" "3552 440.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 0]"
@@ -42463,10 +42417,11 @@ entity
 		"OnTrigger" "hetzer_trackTimerBack_rightDisable0-1"
 		"OnTrigger" "hetzer_sound_tracksRightPlaySound0-1"
 	}
-	"origin" "4108 -706.659 102"
+	"origin" "3536 424.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42491,10 +42446,11 @@ entity
 		"OnTrigger" "hetzer_trackTimerBack_rightEnable0-1"
 		"OnTrigger" "hetzer_sound_tracksRightPlaySound0-1"
 	}
-	"origin" "4124 -706.659 102"
+	"origin" "3552 424.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -42519,10 +42475,11 @@ entity
 		"OnTrigger" "hetzer_trackTimerBack_rightDisable0-1"
 		"OnTrigger" "hetzer_sound_tracksRightStopSound0-1"
 	}
-	"origin" "4108 -722.659 102"
+	"origin" "3536 408.341 102"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -46909,10 +46866,11 @@ entity
 	"filtername" "hetzer_mover"
 	"Negated" "Allow entities that match criteria"
 	"targetname" "filter_hetzer_mover"
-	"origin" "4005.57 -695.317 55.8481"
+	"origin" "3434 435.683 103"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[2500 -13268]"
@@ -47035,7 +46993,7 @@ entity
 		{
 			"id" "16940"
 			"plane" "(-3757 113 410) (-3757 158 410) (-3711 158 410)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 -28] 0.25"
 			"vaxis" "[0 -1 0 24] 0.25"
 			"rotation" "0"
@@ -47046,7 +47004,7 @@ entity
 		{
 			"id" "16939"
 			"plane" "(-3757 158 346) (-3757 113 346) (-3711 113 346)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 -28] 0.25"
 			"vaxis" "[0 -1 0 24] 0.25"
 			"rotation" "0"
@@ -47057,7 +47015,7 @@ entity
 		{
 			"id" "16938"
 			"plane" "(-3757 113 346) (-3757 158 346) (-3757 158 410)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[0 1 0 -24] 0.25"
 			"vaxis" "[0 0 -1 -60] 0.25"
 			"rotation" "0"
@@ -47068,7 +47026,7 @@ entity
 		{
 			"id" "16937"
 			"plane" "(-3711 158 346) (-3711 113 346) (-3711 113 410)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[0 1 0 -24] 0.25"
 			"vaxis" "[0 0 -1 -60] 0.25"
 			"rotation" "0"
@@ -47079,7 +47037,7 @@ entity
 		{
 			"id" "16936"
 			"plane" "(-3757 158 346) (-3711 158 346) (-3711 158 410)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 -28] 0.25"
 			"vaxis" "[0 0 -1 -60] 0.25"
 			"rotation" "0"
@@ -47090,7 +47048,7 @@ entity
 		{
 			"id" "16935"
 			"plane" "(-3711 113 346) (-3757 113 346) (-3757 113 410)"
-			"material" "ASD/GUP_M4H"
+			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 -28] 0.25"
 			"vaxis" "[0 0 -1 -60] 0.25"
 			"rotation" "0"
@@ -47118,7 +47076,7 @@ entity
 	"classname" "trigger_multiple"
 	"filtername" "filter_allies"
 	"origin" "3350 -62 132"
-	"parentname" "hetzer_teleporterBrush1"
+	"parentname" "hetzer_mover"
 	"spawnflags" "4097"
 	"StartDisabled" "0"
 	"targetname" "trigger_hetzerAllies"
@@ -47131,6 +47089,7 @@ entity
 		"OnNotTouching" "hetzer_mlogic_boolForwardSetValue00-1"
 		"OnTouching" "hetzer_mlogic_boolForwardBulbColor0 255 2550-1"
 		"OnNotTouching" "hetzer_mlogic_boolForwardBulbColor255 255 2550-1"
+		"OnStartTouch" "hetzer_mlogic_fun_startCycleTrigger01"
 	}
 	solid
 	{
@@ -47230,10 +47189,11 @@ entity
 		"OnTrigger" "hetzer_mlogic_boolForwardBulbDisable0-1"
 		"OnTrigger" "hetzer_mlogic_boolBackBulbDisable0-1"
 	}
-	"origin" "4181.23 -701.763 165.72"
+	"origin" "3609.23 429.237 165.72"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 500]"
@@ -47254,10 +47214,11 @@ entity
 		"OnLoadGame" "hide_propsTrigger0-1"
 		"OnBackgroundMap" "hide_propsTrigger0-1"
 	}
-	"origin" "4201.74 -702 165.72"
+	"origin" "3629.74 429 165.72"
 	editor
 	{
-		"color" "220 30 220"
+		"color" "176 109 0"
+		"groupid" "331653"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
 		"logicalpos" "[0 2500]"
@@ -47269,7 +47230,7 @@ entity
 	"classname" "trigger_multiple"
 	"filtername" "filter_axis"
 	"origin" "3437 -63 132"
-	"parentname" "hetzer_teleporterBrush1"
+	"parentname" "hetzer_mover"
 	"spawnflags" "4097"
 	"StartDisabled" "0"
 	"targetname" "trigger_hetzerAxis"
@@ -48203,7 +48164,6 @@ entity
 	"id" "264789"
 	"classname" "env_cubemap"
 	"cubemapsize" "0"
-	"sides" ""
 	"origin" "3904.43 -41.5558 111.945"
 	editor
 	{
@@ -131360,8 +131320,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[3597.01 -140.108 217.132]"
-		"look" "[-2480 1149.07 -3562.93]"
+		"position" "[3449.39 194.362 166.015]"
+		"look" "[3608.35 4391.42 -5770.33]"
 	}
 }
 cordons
