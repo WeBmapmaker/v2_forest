@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7690"
-	"mapversion" "655"
+	"mapversion" "662"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "655"
+	"mapversion" "662"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.23 from doi_v2_forest"
 	"detailmaterial" "detail/detailsprites"
@@ -41742,7 +41742,7 @@ entity
 {
 	"id" "311538"
 	"classname" "logic_relay"
-	"spawnflags" "0"
+	"spawnflags" "2"
 	"StartDisabled" "0"
 	"targetname" "hetzer_mlogic_reset"
 	connections
@@ -41767,7 +41767,7 @@ entity
 	"id" "311647"
 	"classname" "trigger_multiple"
 	"filtername" "filter_hetzer_mover"
-	"origin" "3305 -54.5 64"
+	"origin" "3316 -56 84"
 	"spawnflags" "64"
 	"StartDisabled" "0"
 	"targetname" "hetzer_starter"
@@ -41782,7 +41782,7 @@ entity
 		side
 		{
 			"id" "16994"
-			"plane" "(3282 -77 96) (3282 -32 96) (3328 -32 96)"
+			"plane" "(3096 -176 136) (3096 64 136) (3536 64 136)"
 			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 40] 0.25"
 			"vaxis" "[0 -1 0 -32] 0.25"
@@ -41793,7 +41793,7 @@ entity
 		side
 		{
 			"id" "16993"
-			"plane" "(3282 -32 32) (3282 -77 32) (3328 -77 32)"
+			"plane" "(3096 64 32) (3096 -176 32) (3536 -176 32)"
 			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 40] 0.25"
 			"vaxis" "[0 -1 0 -32] 0.25"
@@ -41804,7 +41804,7 @@ entity
 		side
 		{
 			"id" "16992"
-			"plane" "(3282 -77 32) (3282 -32 32) (3282 -32 96)"
+			"plane" "(3096 -176 32) (3096 64 32) (3096 64 136)"
 			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[0 1 0 32] 0.25"
 			"vaxis" "[0 0 -1 -36] 0.25"
@@ -41815,7 +41815,7 @@ entity
 		side
 		{
 			"id" "16991"
-			"plane" "(3328 -32 32) (3328 -77 32) (3328 -77 96)"
+			"plane" "(3536 64 32) (3536 -176 32) (3536 -176 136)"
 			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[0 1 0 32] 0.25"
 			"vaxis" "[0 0 -1 -36] 0.25"
@@ -41826,7 +41826,7 @@ entity
 		side
 		{
 			"id" "16990"
-			"plane" "(3282 -32 32) (3328 -32 32) (3328 -32 96)"
+			"plane" "(3096 64 32) (3536 64 32) (3536 64 136)"
 			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 40] 0.25"
 			"vaxis" "[0 0 -1 -36] 0.25"
@@ -41837,7 +41837,7 @@ entity
 		side
 		{
 			"id" "16989"
-			"plane" "(3328 -77 32) (3282 -77 32) (3282 -77 96)"
+			"plane" "(3536 -176 32) (3096 -176 32) (3096 -176 136)"
 			"material" "TOOLS/TOOLSTRIGGER"
 			"uaxis" "[1 0 0 40] 0.25"
 			"vaxis" "[0 0 -1 -36] 0.25"
@@ -131749,8 +131749,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[3262.01 -48.0911 178.652]"
-		"look" "[10504 -311.738 783.312]"
+		"position" "[3418.84 158.244 259.013]"
+		"look" "[6795.23 5040.92 -3941.08]"
 	}
 }
 cordons
