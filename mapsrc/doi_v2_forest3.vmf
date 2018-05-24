@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7690"
-	"mapversion" "655"
+	"mapversion" "658"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "655"
+	"mapversion" "658"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.23 from doi_v2_forest"
 	"detailmaterial" "detail/detailsprites"
@@ -40523,6 +40523,7 @@ entity
 		"OnTrigger" "hetzer_mlogic_fun_stopDisable0-1"
 		"OnTrigger" "hetzer_mlogic_fun_stopEnable1.99-1"
 		"OnTrigger" "hetzer_mlogic_fun_stopCheckEnable0-1"
+		"OnTrigger" "hetzer_starterTouchTest0-1"
 	}
 	"origin" "3496 224 168"
 	editor
@@ -41742,7 +41743,7 @@ entity
 {
 	"id" "311538"
 	"classname" "logic_relay"
-	"spawnflags" "0"
+	"spawnflags" "2"
 	"StartDisabled" "0"
 	"targetname" "hetzer_mlogic_reset"
 	connections
@@ -42082,7 +42083,6 @@ entity
 	{
 		"OnTimer" "trigger_hetzerAlliesTouchTest0-1"
 		"OnTimer" "trigger_hetzerAxisTouchTest0-1"
-		"OnTimer" "hetzer_starterTouchTest0-1"
 	}
 	"origin" "3480 208 168"
 	editor
@@ -131749,8 +131749,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[3869.22 100.664 375.288]"
-		"look" "[-2261.27 -3777.14 -135.83]"
+		"position" "[3461.3 192.435 254.969]"
+		"look" "[5579.61 1125.24 -6638.81]"
 	}
 }
 cordons
