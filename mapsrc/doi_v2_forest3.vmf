@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7690"
-	"mapversion" "659"
+	"mapversion" "661"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "659"
+	"mapversion" "661"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.23 from doi_v2_forest"
 	"detailmaterial" "detail/detailsprites"
@@ -41797,7 +41797,7 @@ entity
 	"rendermode" "0"
 	"SetBodyGroup" "0"
 	"shadowdepthnocache" "0"
-	"skin" "0"
+	"skin" "2"
 	"solid" "6"
 	"spawnflags" "0"
 	"StartDisabled" "0"
@@ -46480,11 +46480,11 @@ entity
 	"BaseSpread" "5"
 	"EndSize" "20"
 	"InitialState" "0"
-	"JetLength" "70"
+	"JetLength" "35"
 	"modelscale" "0.5"
 	"parentname" "hetzer_body"
-	"Rate" "10"
-	"renderamt" "150"
+	"Rate" "9"
+	"renderamt" "120"
 	"rendercolor" "182 173 167"
 	"roll" "0"
 	"SmokeMaterial" "particle/SmokeStack.vmt"
@@ -103322,7 +103322,7 @@ entity
 		"OnBreak" "barrier_passed_2PlaySound0-1"
 		"OnBreak" "sand4Kill0-1"
 		"OnBreak" "hetzer_stopper2Disable0-1"
-		"OnBreak" "hetzer_starter2Enable0-1"
+		"OnBreak" "hetzer_starter2Enable1-1"
 	}
 	editor
 	{
@@ -103583,7 +103583,7 @@ entity
 		"OnBreak" "barrier_passed_1PlaySound0-1"
 		"OnBreak" "sand2Kill0-1"
 		"OnBreak" "hetzer_stopper1Disable0-1"
-		"OnBreak" "hetzer_starter1Enable0-1"
+		"OnBreak" "hetzer_starter1Enable1-1"
 	}
 	editor
 	{
@@ -127015,7 +127015,7 @@ entity
 	"model" "models/vehicles/tiger2.mdl"
 	"renderamt" "255"
 	"rendercolor" "255 255 255"
-	"skin" "0"
+	"skin" "2"
 	"solid" "6"
 	"origin" "-4680.32 74.4265 361"
 	editor
@@ -131650,8 +131650,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[3490.84 90.2958 328.605]"
-		"look" "[3116.04 5258.99 -4772.88]"
+		"position" "[3271.23 34.7265 265.509]"
+		"look" "[7428.27 -3711.28 -4378.6]"
 	}
 }
 cordons
