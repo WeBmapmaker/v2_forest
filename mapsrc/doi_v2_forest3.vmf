@@ -2,7 +2,7 @@ versioninfo
 {
 	"editorversion" "400"
 	"editorbuild" "7690"
-	"mapversion" "661"
+	"mapversion" "667"
 	"formatversion" "100"
 	"prefab" "0"
 }
@@ -44,7 +44,7 @@ viewsettings
 world
 {
 	"id" "1"
-	"mapversion" "661"
+	"mapversion" "667"
 	"classname" "worldspawn"
 	"comment" "Decompiled by BSPSource v1.3.23 from doi_v2_forest"
 	"detailmaterial" "detail/detailsprites"
@@ -39964,198 +39964,123 @@ world
 }
 entity
 {
-	"id" "342886"
-	"classname" "trigger_multiple"
-	"filtername" "filter_hetzer_mover"
-	"origin" "745 705.5 64"
-	"spawnflags" "64"
-	"StartDisabled" "1"
-	"targetname" "hetzer_starter1"
-	"wait" "1"
+	"id" "348485"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "hetzer_mlogic_boolStop2"
 	connections
 	{
-		"OnStartTouch" "hetzer_mlogic_boolStopSetValue00-1"
+		"OnFalse" "hetzer_mlogic_boolSkipBackTest0-1"
+		"OnTrue" "hetzer_mlogic_fun_stopTrigger0.01-1"
+		"OnTrue" "hetzer_mlogic_fun_startCycleTrigger0.02-1"
+		"OnTrue" "hetzer_mlogic_fun_stopEnable0-1"
 	}
-	solid
-	{
-		"id" "342887"
-		side
-		{
-			"id" "17198"
-			"plane" "(722 683 96) (722 728 96) (768 728 96)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 40] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17197"
-			"plane" "(722 728 32) (722 683 32) (768 683 32)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 40] 0.25"
-			"vaxis" "[0 -1 0 0] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17196"
-			"plane" "(722 683 32) (722 728 32) (722 728 96)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 -36] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17195"
-			"plane" "(768 728 32) (768 683 32) (768 683 96)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 0] 0.25"
-			"vaxis" "[0 0 -1 -36] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17194"
-			"plane" "(722 728 32) (768 728 32) (768 728 96)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 40] 0.25"
-			"vaxis" "[0 0 -1 -36] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17193"
-			"plane" "(768 683 32) (722 683 32) (722 683 96)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 40] 0.25"
-			"vaxis" "[0 0 -1 -36] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
+	"origin" "3480 224 168"
 	editor
 	{
 		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
-		"logicalpos" "[0 2500]"
+		"logicalpos" "[0 1000]"
 	}
 }
 entity
 {
-	"id" "342961"
-	"classname" "trigger_multiple"
-	"filtername" "filter_hetzer_mover"
-	"origin" "-1511 329.5 248"
-	"spawnflags" "64"
-	"StartDisabled" "1"
-	"targetname" "hetzer_starter2"
-	"wait" "1"
+	"id" "348553"
+	"classname" "logic_compare"
+	"CompareValue" "0"
+	"InitialValue" "2"
+	"targetname" "gun_shouldFire"
 	connections
 	{
-		"OnStartTouch" "hetzer_mlogic_boolStopSetValue00-1"
+		"OnEqualTo" "gun_fireTimerEnable0-1"
+		"OnNotEqualTo" "gun_fireTimerDisable0-1"
 	}
-	solid
-	{
-		"id" "342962"
-		side
-		{
-			"id" "17210"
-			"plane" "(-1534 307 280) (-1534 352 280) (-1488 352 280)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 -24] 0.25"
-			"vaxis" "[0 -1 0 -32] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17209"
-			"plane" "(-1534 352 216) (-1534 307 216) (-1488 307 216)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 -24] 0.25"
-			"vaxis" "[0 -1 0 -32] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17208"
-			"plane" "(-1534 307 216) (-1534 352 216) (-1534 352 280)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[0 0 -1 -4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17207"
-			"plane" "(-1488 352 216) (-1488 307 216) (-1488 307 280)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[0 1 0 32] 0.25"
-			"vaxis" "[0 0 -1 -4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17206"
-			"plane" "(-1534 352 216) (-1488 352 216) (-1488 352 280)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 -24] 0.25"
-			"vaxis" "[0 0 -1 -4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		side
-		{
-			"id" "17205"
-			"plane" "(-1488 307 216) (-1534 307 216) (-1534 307 280)"
-			"material" "TOOLS/TOOLSTRIGGER"
-			"uaxis" "[1 0 0 -24] 0.25"
-			"vaxis" "[0 0 -1 -4] 0.25"
-			"rotation" "0"
-			"lightmapscale" "16"
-			"smoothing_groups" "0"
-		}
-		editor
-		{
-			"color" "220 30 220"
-			"visgroupshown" "1"
-			"visgroupautoshown" "1"
-		}
-	}
+	"origin" "-4480 88 400"
 	editor
 	{
 		"color" "220 30 220"
 		"visgroupshown" "1"
 		"visgroupautoshown" "1"
-		"logicalpos" "[0 2500]"
+		"logicalpos" "[0 0]"
+	}
+}
+entity
+{
+	"id" "348687"
+	"classname" "logic_timer"
+	"LowerRandomBound" "0.5"
+	"spawnflags" "0"
+	"StartDisabled" "0"
+	"targetname" "gun_onOffTimer"
+	"UpperRandomBound" "3"
+	"UseRandomTime" "1"
+	connections
+	{
+		"OnTimer" "gun_onOffToggleTest0-1"
+	}
+	"origin" "-4480 120 408"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 4500]"
+	}
+}
+entity
+{
+	"id" "348697"
+	"classname" "logic_branch"
+	"InitialValue" "0"
+	"targetname" "gun_onOff"
+	connections
+	{
+		"OnFalse" "gun_shouldFireSetValueCompare20-1"
+		"OnTrue" "gun_shouldFireSetValueCompare10-1"
+	}
+	"origin" "-4480 104 401"
+	editor
+	{
+		"color" "220 30 220"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 500]"
+	}
+}
+entity
+{
+	"id" "348795"
+	"classname" "prop_static"
+	"angles" "0 0 0"
+	"disableflashlight" "0"
+	"disableselfshadowing" "0"
+	"disableshadowdepth" "0"
+	"disableshadows" "0"
+	"disablevertexlighting" "0"
+	"disableX360" "0"
+	"drawinfastreflection" "0"
+	"fademaxdist" "0"
+	"fademindist" "-1"
+	"fadescale" "1"
+	"ignorenormals" "0"
+	"maxcpulevel" "0"
+	"maxgpulevel" "0"
+	"mincpulevel" "0"
+	"mingpulevel" "0"
+	"renderamt" "255"
+	"rendercolor" "255 255 255"
+	"screenspacefade" "0"
+	"shadowdepthnocache" "0"
+	"skin" "0"
+	"solid" "6"
+	"origin" "-5060.06 148.115 401"
+	editor
+	{
+		"color" "255 255 0"
+		"visgroupshown" "1"
+		"visgroupautoshown" "1"
+		"logicalpos" "[0 1000]"
 	}
 }
 entity
@@ -40426,7 +40351,7 @@ entity
 		"OnTrigger" "hetzer_mlogic_fun_stopCheckEnable0-1"
 		"OnTrigger" "hetzer_starterTouchTest0-1"
 	}
-	"origin" "3496 224 168"
+	"origin" "3512 224 168"
 	editor
 	{
 		"color" "245 142 0"
@@ -40869,7 +40794,7 @@ entity
 		"OnCase06" "tiger_impactExpl6Explode0-1"
 		"OnCase07" "tiger_impactExpl7Explode0-1"
 	}
-	"origin" "-4474.33 201.773 401"
+	"origin" "-4464 176 400"
 	editor
 	{
 		"color" "220 30 220"
@@ -41065,7 +40990,7 @@ entity
 		"OnTrigger" "!selfDisable0-1"
 		"OnTrigger" "!selfEnable3-1"
 	}
-	"origin" "-4460.99 159.639 401"
+	"origin" "-4464 160 400"
 	editor
 	{
 		"color" "220 30 220"
@@ -41078,6 +41003,7 @@ entity
 {
 	"id" "318109"
 	"classname" "logic_relay"
+	"spawnflags" "0"
 	"StartDisabled" "0"
 	"targetname" "tiger_fun_destroy"
 	connections
@@ -41089,8 +41015,10 @@ entity
 		"OnTrigger" "tiger_gunTriggerDisable0-1"
 		"OnTrigger" "gun_fireTimerDisable0-1"
 		"OnTrigger" "gun_triggerDisable0-1"
+		"OnTrigger" "gun_onOffTimerDisable0-1"
+		"OnTrigger" "gun_shouldFireKill0-1"
 	}
-	"origin" "-4441.59 160.575 401"
+	"origin" "-4440 160 400"
 	editor
 	{
 		"color" "220 30 220"
@@ -41441,7 +41369,7 @@ entity
 		"OnTrigger" "gun_spriteFlashShowSprite0-1"
 		"OnTrigger" "gun_spriteFlashHideSprite0.08-1"
 	}
-	"origin" "-4481.59 55.5568 408"
+	"origin" "-4480 56 400"
 	editor
 	{
 		"color" "220 30 220"
@@ -41463,7 +41391,7 @@ entity
 	{
 		"OnTimer" "gun_fireTrigger0-1"
 	}
-	"origin" "-4481.56 70.4218 408"
+	"origin" "-4480 72 400"
 	editor
 	{
 		"color" "220 30 220"
@@ -41485,7 +41413,7 @@ entity
 	{
 		"OnTimer" "gun_triggerTouchTest0-1"
 	}
-	"origin" "-4484.41 105.142 401"
+	"origin" "-4464 88 400"
 	editor
 	{
 		"color" "220 30 220"
@@ -41506,8 +41434,8 @@ entity
 	"wait" "1"
 	connections
 	{
-		"OnTouching" "gun_fireTimerEnable0-1"
-		"OnNotTouching" "gun_fireTimerDisable0-1"
+		"OnTouching" "gun_shouldFireSetCompareValue10-1"
+		"OnNotTouching" "gun_shouldFireSetCompareValue00-1"
 	}
 	solid
 	{
@@ -41653,6 +41581,7 @@ entity
 		"OnTrigger" "hetzer_mlogic_boolStopSetValue00-1"
 		"OnTrigger" "hetzer_mlogic_boolForwardSetValue00-1"
 		"OnTrigger" "hetzer_mlogic_boolSkipBackSetValue10-1"
+		"OnTrigger" "hetzer_mlogic_boolStop2SetValue00-1"
 	}
 	"origin" "3496 256 168"
 	editor
@@ -41985,7 +41914,7 @@ entity
 		"OnTimer" "trigger_hetzerAlliesTouchTest0-1"
 		"OnTimer" "trigger_hetzerAxisTouchTest0-1"
 	}
-	"origin" "3480 208 168"
+	"origin" "3496 208 168"
 	editor
 	{
 		"color" "245 142 0"
@@ -42028,12 +41957,12 @@ entity
 	"targetname" "hetzer_mlogic_boolStop"
 	connections
 	{
-		"OnFalse" "hetzer_mlogic_boolSkipBackTest0-1"
+		"OnFalse" "hetzer_mlogic_boolStop2Test0-1"
 		"OnTrue" "hetzer_mlogic_fun_stopTrigger0.01-1"
 		"OnTrue" "hetzer_mlogic_fun_startCycleTrigger0.02-1"
 		"OnTrue" "hetzer_mlogic_fun_stopEnable0-1"
 	}
-	"origin" "3480 224 168"
+	"origin" "3496 224 168"
 	editor
 	{
 		"color" "245 142 0"
@@ -47217,7 +47146,7 @@ entity
 	"targetname" "hetzer_stopper2"
 	connections
 	{
-		"OnStartTouch" "hetzer_mlogic_boolStopSetValue10-1"
+		"OnStartTouch" "hetzer_mlogic_boolStop2SetValue10-1"
 	}
 	solid
 	{
@@ -103322,7 +103251,7 @@ entity
 		"OnBreak" "barrier_passed_2PlaySound0-1"
 		"OnBreak" "sand4Kill0-1"
 		"OnBreak" "hetzer_stopper2Disable0-1"
-		"OnBreak" "hetzer_starter2Enable1-1"
+		"OnBreak" "hetzer_mlogic_boolStop2SetValue00.5-1"
 	}
 	editor
 	{
@@ -103583,7 +103512,7 @@ entity
 		"OnBreak" "barrier_passed_1PlaySound0-1"
 		"OnBreak" "sand2Kill0-1"
 		"OnBreak" "hetzer_stopper1Disable0-1"
-		"OnBreak" "hetzer_starter1Enable1-1"
+		"OnBreak" "hetzer_mlogic_boolStopSetValue00.5-1"
 	}
 	editor
 	{
@@ -131650,8 +131579,8 @@ cameras
 	"activecamera" "0"
 	camera
 	{
-		"position" "[3271.23 34.7265 265.509]"
-		"look" "[7428.27 -3711.28 -4378.6]"
+		"position" "[-4471.58 448.856 879.049]"
+		"look" "[-4717.19 6928.71 -2412.18]"
 	}
 }
 cordons
